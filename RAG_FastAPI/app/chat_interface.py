@@ -3,26 +3,7 @@ from api_utils import get_api_response
 import sys
 import os
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../api")))
-# Mock function to get booking data
-def get_bookings():
-    # Example booking data
-    return [
-        {
-            "name": "John Doe",
-            "time": "19:00",
-            "date": "2025-01-26",
-            "nums_of_customers": 4,
-            "restaurant_position": "Main Dining Room"
-        },
-        {
-            "name": "Jane Smith",
-            "time": "20:00",
-            "date": "2025-01-27",
-            "nums_of_customers": 2,
-            "restaurant_position": "Outdoor Patio"
-        }
-    ]
+
 import requests
 import streamlit as st
 
@@ -117,21 +98,34 @@ def display_chat_interface():
                                 st.error(str(e))
 
                         elif "<notconfirm>" in booking_content and "</notconfirm>" in booking_content:
+                            booking_data = booking_content.split("<notconfirm>")[1].split("</notconfirm>")[0].strip()
                             try:
-                                # Remove the content inside <notconfirm>...</notconfirm>
-                                before_notconfirm = booking_content.split("<notconfirm>")[0].strip()
-                                after_notconfirm = booking_content.split("</notconfirm>")[1].strip()
+                                booking = eval(booking_data)
+                                missing_info = []
+                                if not booking["name"]:
+                                    missing_info.append("your name")
+                                if not booking["time"]:
+                                    missing_info.append("the time you'd like to book")
+                                if not booking["date"]:
+                                    missing_info.append("the date you'd like to book")
+                                if not booking["nums_of_customers"]:
+                                    missing_info.append("the number of customers")
+                                if not booking["restaurant_position"]:
+                                    missing_info.append("your seating preference (indoor or outdoor)")
 
-                                # Combine the parts before and after <notconfirm>...</notconfirm>
-                                cleaned_response = f"{before_notconfirm} {after_notconfirm}".strip()
-
-                                # Display the cleaned response
-                                st.warning(cleaned_response)
+                                if missing_info:
+                                    missing_info_str = ", ".join(missing_info[:-1]) + (
+                                        f", and {missing_info[-1]}" if len(missing_info) > 1 else missing_info[-1]
+                                    )
+                                    st.warning(
+                                        f"I'm happy to help you with your booking! However, I need more information from you. "
+                                        f"Could you please provide {missing_info_str}?"
+                                    )
+                                else:
+                                    st.error("Unexpected error: All details appear missing.")
                             except Exception as e:
-                                st.error("Failed to process incomplete booking information.")
+                                st.error("Failed to parse incomplete booking.")
                                 st.error(str(e))
-
-
 
                     else:
                         # Display normal response

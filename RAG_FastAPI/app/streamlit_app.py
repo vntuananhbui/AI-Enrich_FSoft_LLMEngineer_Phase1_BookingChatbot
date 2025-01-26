@@ -15,4 +15,4 @@ if "session_id" not in st.session_state:
 display_sidebar()
 
 # Display the chat interface
-display_chat_interface()
+# display_chat_interface()

@@ -124,7 +124,7 @@ def delete_table(table_name: str):
     """
     conn = sqlite3.connect("rag_app1.db")  # Replace with your database name
     try:
-        conn.execute(f"DROP TABLE IF EXISTS {bookings}")
+        conn.execute(f"DROP TABLE IF EXISTS {table_name}")
         print("Delte complete!")
         conn.commit()
     finally:

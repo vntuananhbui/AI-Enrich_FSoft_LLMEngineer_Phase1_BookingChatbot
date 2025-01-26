@@ -922,3 +922,208 @@ INFO:root:Session ID: None, User Query: i want to book table at 9pm
 , Model: gemini-1.5-pro
 INFO:openai._base_client:Retrying request to /chat/completions in 0.415508 seconds
 INFO:openai._base_client:Retrying request to /chat/completions in 0.848140 seconds
+INFO:root:Session ID: None, User Query: Hello, can you introduce about your restaurant?, Model: gemini-1.5-pro
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:root:Session ID: ceaf7322-c572-4c28-a8b1-7607f7a8e3b6, AI Response: Welcome to Tom's Restaurant! We're a family-owned restaurant known for our fusion of classic and contemporary dishes made with fresh, locally sourced ingredients. Our mission is to create an unforgettable dining experience for every guest. Whether you're celebrating a special occasion or enjoying a casual meal, our team is dedicated to providing exceptional service and culinary excellence.
+INFO:root:Session ID: ceaf7322-c572-4c28-a8b1-7607f7a8e3b6, User Query: How can i booking?, Model: gemini-1.5-pro
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+WARNING:root:Incomplete booking received: {'name': '', 'time': '', 'date': '', 'nums_of_customers': '', 'restaurant_position': ''}
+INFO:root:Session ID: ceaf7322-c572-4c28-a8b1-7607f7a8e3b6, AI Response: <booking>
+<notconfirm>
+{
+  "name": "",
+  "time": "",
+  "date": "",
+  "nums_of_customers": "",
+  "restaurant_position": ""
+}
+</notconfirm>
+</booking>
+
+To book a table, could you please provide me with the following information: your name, preferred time, date, number of customers, and your preferred restaurant position (indoor or outdoor seating)?
+INFO:root:Session ID: None, User Query: hello introduce about your restaurant, Model: gemini-1.5-pro
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:root:Session ID: 64bae8aa-3621-4c53-8122-20bc1e627ca0, AI Response: Welcome to Tom's Restaurant! We're a family-owned restaurant known for our fusion of classic and contemporary dishes made with fresh, locally sourced ingredients. Our mission is to create an unforgettable dining experience for every guest. Whether you're celebrating a special occasion or enjoying a casual meal, our team is dedicated to providing exceptional service and culinary excellence.
+INFO:root:Session ID: 64bae8aa-3621-4c53-8122-20bc1e627ca0, User Query: How can i booking?
+, Model: gemini-1.5-pro
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:root:Session ID: 64bae8aa-3621-4c53-8122-20bc1e627ca0, AI Response: To book a table at Tom's Restaurant, I'll need some information from you. Could you please provide the following details:
+
+* Your name
+* Preferred date and time for your reservation
+* Number of customers in your party
+* Your preferred seating position (indoor or outdoor)
+
+Once I have this information, I can assist you with your booking.
+INFO:root:Session ID: 64bae8aa-3621-4c53-8122-20bc1e627ca0, User Query: my name is tom, i want to book at 26/3/2025 with 3 people and outdoor, Model: gemini-1.5-pro
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:root:Booking confirmed and added to database: {'name': 'Tom', 'time': '', 'date': '26/3/2025', 'nums_of_customers': 3, 'restaurant_position': 'outdoor'}
+INFO:root:Session ID: 64bae8aa-3621-4c53-8122-20bc1e627ca0, AI Response: <booking>
+<confirm>
+{
+  "name": "Tom",
+  "time": "", 
+  "date": "26/3/2025",
+  "nums_of_customers": 3,
+  "restaurant_position": "outdoor"
+}
+</confirm>
+</booking>
+
+I apologize, but I didn't receive your preferred time for the reservation. Could you please provide the time you would like to book for 26/3/2025?
+INFO:root:Session ID: 64bae8aa-3621-4c53-8122-20bc1e627ca0, User Query: my name is tom, i want to book at 26/3/2025 with 3 people and outdoor
+, Model: gemini-1.5-pro
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+WARNING:root:Incomplete booking received: {'name': 'Tom', 'time': '', 'date': '26/3/2025', 'nums_of_customers': 3, 'restaurant_position': 'outdoor'}
+INFO:root:Session ID: 64bae8aa-3621-4c53-8122-20bc1e627ca0, AI Response: I apologize, but I didn't receive your preferred time for the reservation. Could you please provide the time you would like to book for 26/3/2025?
+
+Here is the updated booking information:
+
+<booking>
+<notconfirm>
+{
+  "name": "Tom",
+  "time": "", 
+  "date": "26/3/2025",
+  "nums_of_customers": 3,
+  "restaurant_position": "outdoor"
+}
+</notconfirm>
+</booking>
+
+Please provide the time, and I'll be happy to assist you with your booking.
+INFO:root:Session ID: None, User Query: Hello, Model: gemini-1.5-pro
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:root:Session ID: a6745ba9-2aa3-4b50-a31f-9e3e59f408a3, AI Response: Welcome to Tom's Restaurant! How can I assist you today? Would you like to make a reservation, ask about our menu, or get more information about our promotions and discounts?
+INFO:root:Session ID: a6745ba9-2aa3-4b50-a31f-9e3e59f408a3, User Query: is there parking available, Model: gemini-1.5-pro
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:root:Session ID: a6745ba9-2aa3-4b50-a31f-9e3e59f408a3, AI Response: Yes, we have complimentary parking available on-site, and there's also additional parking in an adjacent lot. You don't have to worry about finding a spot to park your vehicle when you visit us!
+INFO:root:Session ID: a6745ba9-2aa3-4b50-a31f-9e3e59f408a3, User Query: give me some menu highlight, Model: gemini-1.5-pro
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:root:Session ID: a6745ba9-2aa3-4b50-a31f-9e3e59f408a3, AI Response: We're proud of our menu at Tom's Restaurant. Here are some highlights:
+
+**Appetizers:** Our Garlic Parmesan Wings ($9.99) and Crispy Calamari ($10.99) are fan favorites.
+
+**Main Courses:** Our Grilled Salmon with Lemon Butter ($18.99) and Ribeye Steak with Herb Butter ($24.99) are popular choices.
+
+**Sandwiches & Burgers:** Our Classic Cheeseburger ($11.99) and Spicy Chicken Sandwich ($12.49) are always in demand.
+
+**Sides:** You can't go wrong with our French Fries (available as a side dish).
+
+We have a lot more to offer, but these are some of the dishes that our customers love the most. Would you like more information or recommendations?
+INFO:root:Session ID: a6745ba9-2aa3-4b50-a31f-9e3e59f408a3, User Query: give me some main courses, Model: gemini-1.5-pro
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:root:Session ID: a6745ba9-2aa3-4b50-a31f-9e3e59f408a3, AI Response: Here are our Main Courses at Tom's Restaurant:
+
+1. **Grilled Salmon with Lemon Butter** - $18.99
+2. **Ribeye Steak with Herb Butter** - $24.99
+3. **Chicken Alfredo Pasta** - $15.99
+4. **Vegan Buddha Bowl** - $13.99
+5. **BBQ Pork Ribs** - $19.99
+6. **Shrimp Scampi** - $16.99
+7. **Margherita Pizza** - $12.99
+
+These are just a few of our main course options. We have a variety of dishes to suit different tastes and dietary preferences. Would you like more information or recommendations?
+INFO:root:Session ID: a6745ba9-2aa3-4b50-a31f-9e3e59f408a3, User Query: give me information about your restaurant, Model: gemini-1.5-pro
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:root:Session ID: a6745ba9-2aa3-4b50-a31f-9e3e59f408a3, AI Response: Here's some information about Tom's Restaurant:
+
+**Name:** Tom Restaurant
+**Location:** 554 Nguyen Dinh Chieu, District 3, Ho Chi Minh City
+**Hours of Operation:**
+	* Monday to Friday: 11:00 AM - 10:00 PM
+	* Saturday: 10:00 AM - 11:00 PM
+	* Sunday: 10:00 AM - 9:00 PM
+**Contact Information:**
+	* Phone: +84 945757071
+	* Email: vntuananhbui@gmail.com
+	* Website: www.gourmethaven.com
+**Special Features:**
+	* Indoor and outdoor seating
+	* Wheelchair accessible
+	* Free Wi-Fi
+	* Pet-friendly outdoor patio
+**About Us:**
+Tom's Restaurant is a family-owned restaurant known for its fusion of classic and contemporary dishes made with fresh, locally sourced ingredients. We're committed to providing a warm and welcoming atmosphere for our guests.
+
+I hope that helps! Let me know if you have any other questions.
+INFO:root:Session ID: a6745ba9-2aa3-4b50-a31f-9e3e59f408a3, User Query: give me information about your restaurant
+
+, Model: gemini-1.5-pro
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:root:Session ID: a6745ba9-2aa3-4b50-a31f-9e3e59f408a3, AI Response: Here's some information about Tom's Restaurant:
+
+**Name:** Tom Restaurant
+**Location:** 554 Nguyen Dinh Chieu, District 3, Ho Chi Minh City
+**Hours of Operation:**
+	* Monday to Friday: 10:00 AM - 10:00 PM
+	* Saturday: 9:00 AM - 11:00 PM
+	* Sunday: 9:00 AM - 11:00 PM
+**Contact Information:**
+	* Phone: 0945757071
+	* Email: vntuananhbui@gmail.com
+	* Website: tomrestaurant.com
+**Special Features:**
+	* Indoor and outdoor seating
+	* Wheelchair accessible
+	* Free Wi-Fi
+	* Pet-friendly outdoor patio
+**About Us:**
+Tom's Restaurant is a family-owned restaurant known for its fusion of classic and contemporary dishes made with fresh, locally sourced ingredients. We're committed to providing a warm and welcoming atmosphere for our guests.
+
+I hope that helps! Let me know if you have any other questions.
+INFO:root:Session ID: a6745ba9-2aa3-4b50-a31f-9e3e59f408a3, User Query: what is best dishes in the world?, Model: gemini-1.5-pro
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:root:Session ID: a6745ba9-2aa3-4b50-a31f-9e3e59f408a3, AI Response: I'm sorry, I cannot answer that based on the provided information. The context only provides information about Tom's Restaurant, its features, and customer testimonials, but it does not provide information about the best dishes in the world.
+INFO:root:Session ID: a6745ba9-2aa3-4b50-a31f-9e3e59f408a3, User Query: give me some Main Courses, Model: gemini-1.5-pro
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:root:Session ID: a6745ba9-2aa3-4b50-a31f-9e3e59f408a3, AI Response: Here are some Main Courses at Tom's Restaurant:
+
+1. **Pho Bo (Beef Noodle Soup)** - 90,000 VND
+2. **Grilled Lemongrass Chicken with Rice** - 100,000 VND
+3. **Banh Xeo (Vietnamese Savory Pancakes)** - 85,000 VND
+
+These are just a few of our main course options. We have a variety of dishes to suit different tastes and dietary preferences. Would you like more information or recommendations?
+INFO:root:Session ID: a6745ba9-2aa3-4b50-a31f-9e3e59f408a3, User Query: How to booking?, Model: gemini-1.5-pro
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:root:Session ID: a6745ba9-2aa3-4b50-a31f-9e3e59f408a3, AI Response: To book a table at Tom's Restaurant, please provide me with the following information:
+
+* Your name
+* Preferred date and time of visit
+* Number of guests
+* Preferred seating position (indoor or outdoor)
+
+You can respond in the following format:
+
+"Book a table for [name] on [date] at [time] for [number of guests] guests at [position]."
+
+I'll let you know if the booking is confirmed or not.
+INFO:root:Session ID: a6745ba9-2aa3-4b50-a31f-9e3e59f408a3, User Query: Book a table for [Tuan Anh] on [1/3/2025] at [8PM] for [2] guests at [indoor]., Model: gemini-1.5-pro
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:root:Booking confirmed and added to database: {'name': 'Tuan Anh', 'time': '8PM', 'date': '1/3/2025', 'nums_of_customers': 2, 'restaurant_position': 'indoor'}
+INFO:root:Session ID: a6745ba9-2aa3-4b50-a31f-9e3e59f408a3, AI Response: <booking>
+<confirm>
+{
+  "name": "Tuan Anh",
+  "time": "8PM",
+  "date": "1/3/2025",
+  "nums_of_customers": 2,
+  "restaurant_position": "indoor"
+}
+</confirm>
+</booking>
+
+Your booking is confirmed! We're looking forward to welcoming you to Tom's Restaurant on 1/3/2025 at 8PM.
