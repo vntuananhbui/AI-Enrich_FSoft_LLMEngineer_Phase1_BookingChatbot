@@ -155,7 +155,7 @@ def get_simple_llm(model="meta-llama/Llama-3-70b-chat-hf"):
     else:
         raise ValueError(f"Unsupported model: {model}")
 
-def get_rag_chain(model="meta-llama/Llama-3-70b-chat-hf"):
+def get_rag_chain(model="gemini-1.5-pro"):
     """
     Create a Retrieval-Augmented Generation (RAG) chain using the specified LLM.
     By default, it uses LLaMA.

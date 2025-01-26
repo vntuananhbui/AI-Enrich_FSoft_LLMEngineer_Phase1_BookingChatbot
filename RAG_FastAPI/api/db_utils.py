@@ -1,7 +1,7 @@
 import sqlite3
 from datetime import datetime
 
-DB_NAME = "/Users/macintosh/TA-DOCUMENT/StudyZone/FPT_WORK/IVY Training/Training_LLM_Engineer/Phase 1/RAG_FastAPI/api/rag_app1.db"
+DB_NAME = "/Users/macintosh/TA-DOCUMENT/StudyZone/FPT_WORK/IVY Training/FSoft_LLMEngineer_Phase1_FAQBookingChatbot/Phase 1/RAG_FastAPI/api/rag_app1.db"
 
 def get_db_connection():
     conn = sqlite3.connect(DB_NAME)

@@ -1127,3 +1127,48 @@ INFO:root:Session ID: a6745ba9-2aa3-4b50-a31f-9e3e59f408a3, AI Response: <bookin
 </booking>
 
 Your booking is confirmed! We're looking forward to welcoming you to Tom's Restaurant on 1/3/2025 at 8PM.
+INFO:root:Session ID: None, User Query: hello, Model: gemini-1.5-pro
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:root:Session ID: fe3facbe-3723-4469-86df-d93c85b9eab3, AI Response: Hello! Welcome to Tom's Restaurant. How can I assist you today?
+INFO:root:Session ID: fe3facbe-3723-4469-86df-d93c85b9eab3, User Query: give me your locaition, Model: gemini-1.5-pro
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:root:Session ID: fe3facbe-3723-4469-86df-d93c85b9eab3, AI Response: I'm sorry, I cannot answer that based on the provided information. The context does not mention the location of Tom's Restaurant.
+INFO:root:Session ID: fe3facbe-3723-4469-86df-d93c85b9eab3, User Query: give me your location, Model: gemini-1.5-pro
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:root:Session ID: fe3facbe-3723-4469-86df-d93c85b9eab3, AI Response: I apologize, but the location of Tom's Restaurant is not specified in the provided context. However, it does mention that the reviews are from customers from USA, Vietnam, and Australia, but it does not provide the exact location of the restaurant.
+INFO:root:Session ID: None, User Query: give me your location
+, Model: gemini-1.5-pro
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:root:Session ID: e2e10eac-cf30-4c3c-8f88-4b611d49d92d, AI Response: I'm sorry, I cannot answer that based on the provided information. The context does not mention the location of Tom's Restaurant.
+INFO:root:Session ID: None, User Query: hello, Model: gemini-1.5-pro
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:root:Session ID: 4f4febe7-70a5-44c6-beaa-8e7f2e3282dd, AI Response: Hello! Welcome to Tom's Restaurant. How can I assist you today?
+INFO:root:Session ID: 4f4febe7-70a5-44c6-beaa-8e7f2e3282dd, User Query: give me your location, Model: gemini-1.5-pro
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:root:Session ID: 4f4febe7-70a5-44c6-beaa-8e7f2e3282dd, AI Response: I'm sorry, I cannot answer that based on the provided information. The context does not mention the location of Tom's Restaurant.
+INFO:root:Session ID: 4f4febe7-70a5-44c6-beaa-8e7f2e3282dd, User Query: give me restaurant location, Model: gemini-1.5-pro
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:root:Session ID: 4f4febe7-70a5-44c6-beaa-8e7f2e3282dd, AI Response: Tom's Restaurant is conveniently located at 702 Nguyen Van Linh, District 7, Ho Chi Minh City.
+INFO:root:Session ID: 4f4febe7-70a5-44c6-beaa-8e7f2e3282dd, User Query: give me promotion, Model: gemini-1.5-pro
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:root:Session ID: 4f4febe7-70a5-44c6-beaa-8e7f2e3282dd, AI Response: We have a few promotions going on! One of them is our Happy Hour, where you can enjoy 20% off beverages from 3:00 PM to 5:00 PM every weekday. We also have a Loyalty Program, where you can earn points with every visit and redeem them for discounts or free dishes. Additionally, we have Seasonal Specials, which you can stay updated on by following us on social media.
+INFO:root:Session ID: 4f4febe7-70a5-44c6-beaa-8e7f2e3282dd, User Query: i want to book table with name is Tuan Anh Bui, on 1/3/2025, 9pm with 3 people outdoor, Model: gemini-1.5-pro
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST https://api.together.xyz/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:root:Booking confirmed and added to database: {'name': 'Tuan Anh Bui', 'time': '9:00 PM', 'date': '1/3/2025', 'nums_of_customers': 3, 'restaurant_position': 'outdoor'}
+INFO:root:Session ID: 4f4febe7-70a5-44c6-beaa-8e7f2e3282dd, AI Response: <booking>
+<confirm>
+{
+  "name": "Tuan Anh Bui",
+  "time": "9:00 PM",
+  "date": "1/3/2025",
+  "nums_of_customers": 3,
+  "restaurant_position": "outdoor"
+}
+</confirm>
+</booking>
